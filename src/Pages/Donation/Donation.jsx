@@ -36,10 +36,14 @@ const Donation = () => {
             ))}
           </div>
           <div
-            className={dataLength === allDonations.length ? "hidden" : "py-7"}>
+            className={
+              dataLength > 4 && dataLength === allDonations.length
+                ? "hidden"
+                : ""
+            }>
             <button
               onClick={handleSeeAll}
-              className="block mx-auto py-3 px-7 rounded-lg text-white font-semibold bg-[#009444]">
+              className="block mx-auto py-3 px-7 rounded-lg text-white font-semibold bg-[#009444] mt-6">
               See All
             </button>
           </div>
