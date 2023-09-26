@@ -1,41 +1,3 @@
-// import { useEffect, useState } from "react";
-// import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js/auto";
-// import { Pie } from "react-chartjs-2";
-
-// ChartJS.register(ArcElement, Tooltip, Legend);
-
-// const Statistics = () => {
-//   const [allDonations, setAllDonations] = useState([]);
-
-//   useEffect(() => {
-//     const donatedItemsFromLocalStorage = JSON.parse(
-//       localStorage.getItem("donatedItems")
-//     );
-//     setAllDonations(donatedItemsFromLocalStorage);
-//   }, []);
-
-//   const myDonation = allDonations.length;
-//   const remainingDonation = 12 - myDonation;
-
-//   const data = {
-//     datasets: [
-//       {
-//         data: [myDonation, remainingDonation],
-//       },
-//     ],
-//     labels: ["Your Donation", "Total Donation"],
-//   };
-//   const options = {};
-
-//   return (
-//     <div className="w-52">
-//       <Pie data={data} options={options}></Pie>
-//     </div>
-//   );
-// };
-
-// export default Statistics;
-
 import { useEffect, useState } from "react";
 import { PieChart, Pie, Cell } from "recharts";
 
@@ -46,7 +8,9 @@ const Statistics = () => {
     const donatedItemsFromLocalStorage = JSON.parse(
       localStorage.getItem("donatedItems")
     );
-    setAllDonations(donatedItemsFromLocalStorage);
+    if (donatedItemsFromLocalStorage !== null) {
+      setAllDonations(donatedItemsFromLocalStorage);
+    }
   }, []);
 
   const myDonation = allDonations.length;
@@ -66,7 +30,6 @@ const Statistics = () => {
     innerRadius,
     outerRadius,
     percent,
-    index,
   }) => {
     const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
     const x = cx + radius * Math.cos(-midAngle * RADIAN);
