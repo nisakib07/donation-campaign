@@ -2,6 +2,8 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../../components/Banner/Banner";
 import Cards from "../../components/Cards/Cards";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const allCards = useLoaderData();
@@ -16,7 +18,7 @@ const Home = () => {
     if (matchedDonations.length > 0) {
       setMatched(matchedDonations);
     } else {
-      console.log("h");
+      toast("No items found");
     }
   };
 
@@ -36,6 +38,7 @@ const Home = () => {
           ))}
         </div>
       )}
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

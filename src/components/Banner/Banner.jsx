@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Banner = ({ handleOnSubmit }) => {
   const handleSubmit = (e) => {
     handleOnSubmit(e);
@@ -34,6 +36,10 @@ const Banner = ({ handleOnSubmit }) => {
       </div>
     </div>
   );
+};
+
+Banner.propTypes = {
+  handleOnSubmit: PropTypes.func,
 };
 
 export default Banner;
