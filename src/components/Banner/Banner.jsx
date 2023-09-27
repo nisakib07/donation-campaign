@@ -7,7 +7,7 @@ const Banner = ({ handleOnSubmit }) => {
   return (
     <div>
       <div
-        className="hero min-h-[400px] "
+        className="hero min-h-[400px]"
         style={{
           backgroundImage:
             "url(https://i.ibb.co/pjK3Xz8/382818708-3442082969437294-4030565122765922283-n.jpg)",
