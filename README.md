@@ -1,8 +1,8 @@
-# React + Vite
+# Three features of this project:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Search by category:
+  _To donate to someone's desired campaign, this feature makes it easier for them to find the desired category just by searching by the category name._
 
-Currently, two official plugins are available:
+- View Statistics: _One can view a nice pieChart based on his donation. This chart gives an overview about how many one has donated and how many are left._
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- See details about every single donation campaign: _It is necessary for someone to know details about the whole campaign before donating into it. That's why this projects offers them this opportunity to know about the whole campaign by clicking any of the cards._
