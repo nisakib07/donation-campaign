@@ -12,7 +12,7 @@ const Banner = ({ handleOnSubmit }) => {
           backgroundImage:
             "url(https://i.ibb.co/pjK3Xz8/382818708-3442082969437294-4030565122765922283-n.jpg)",
         }}>
-        <div className="hero-overlay opacity-100"></div>
+        <div className="hero-overlay bg-white/90 opacity-100"></div>
         <div className="text-center text-neutral-content">
           <div className="mb-10">
             <h1 className="text-5xl font-bold text-black">
@@ -21,7 +21,7 @@ const Banner = ({ handleOnSubmit }) => {
           </div>
           <form onSubmit={handleSubmit}>
             <input
-              className="text-black h-12 rounded-s-lg placeholder: px-4"
+              className="text-black h-12 rounded-s-lg placeholder: px-4 border-2"
               type="text"
               name="searchText"
               placeholder="Search here...."
@@ -37,7 +37,6 @@ const Banner = ({ handleOnSubmit }) => {
     </div>
   );
 };
-
 Banner.propTypes = {
   handleOnSubmit: PropTypes.func,
 };

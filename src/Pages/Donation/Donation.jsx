@@ -5,6 +5,7 @@ const Donation = () => {
   const [allDonations, setAllDonations] = useState([]);
   const [notFound, setNotFound] = useState(false);
   const [dataLength, setDataLength] = useState(4);
+  const [clicked, setClicked] = useState(false);
   useEffect(() => {
     const donatedItemsFromLocalStorage = JSON.parse(
       localStorage.getItem("donatedItems")
@@ -18,13 +19,15 @@ const Donation = () => {
 
   const handleSeeAll = () => {
     setDataLength(allDonations.length);
+    setClicked(true);
   };
 
+  console.log(allDonations.length, dataLength);
   return (
     <div>
       {notFound ? (
         <div className="flex items-center justify-center min-h-[400px]">
-          <p>{notFound}</p>
+          <p className="text-4xl text-red-500 font-bold">{notFound}</p>
         </div>
       ) : (
         <div>
@@ -37,9 +40,7 @@ const Donation = () => {
           </div>
           <div
             className={
-              dataLength > 4 && dataLength === allDonations.length
-                ? "hidden"
-                : ""
+              allDonations.length <= 4 || clicked === true ? "hidden" : "block"
             }>
             <button
               onClick={handleSeeAll}

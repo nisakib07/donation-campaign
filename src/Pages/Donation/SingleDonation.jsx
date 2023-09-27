@@ -39,7 +39,7 @@ const SingleDonation = ({ singleDonation }) => {
             {category}
           </button>
         </div>
-        <h2 className="text-2xl font-semibold my-2">{name}</h2>
+        <h2 className="text-lg md:text-2xl font-semibold my-2">{name}</h2>
         <h3 style={t_color} className="text-base font-semibold">
           ${price}
         </h3>
