@@ -49,7 +49,7 @@ const Statistics = () => {
   return (
     <div>
       <div className="flex justify-center">
-        <PieChart width={400} height={400}>
+        <PieChart width={270} height={300}>
           <Pie
             data={data}
             cx="50%"
@@ -68,7 +68,7 @@ const Statistics = () => {
           </Pie>
         </PieChart>
       </div>
-      <div className="flex justify-center gap-14">
+      <div className="flex flex-col items-center md:flex-row justify-center gap-14">
         <div className="flex items-center gap-4">
           <h4>Your Donation</h4>
           <div className="w-[100px] h-3 bg-[#00C49F;]"></div>
